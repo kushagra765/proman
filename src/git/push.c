@@ -41,5 +41,5 @@ int push(char *message, char *pwd) {
     printf("+ Done!\n");
     free(commit_command);
 
-	return 1;
+    return 0;
 }
