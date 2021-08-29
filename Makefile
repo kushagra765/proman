@@ -1,5 +1,5 @@
-LD = gcc
 CC = gcc
+LD = gcc
 
 CFLAGS := \
 	-Isrc/include \
