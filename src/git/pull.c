@@ -26,5 +26,5 @@
 
 int pull() {
     system("git pull -u origin master");
-    return 1;
+    return 0;
 }

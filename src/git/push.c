@@ -25,7 +25,7 @@
 #include <git/push.h>
 
 int push(char *message, char *pwd) {
-	// TODO: check if name is in config file.
+    // TODO: check if name is in config file.
     printf("+ Pushing changes in directory %s\n", pwd);
     char *add_command = "git add .";
     char *commit = "git commit -m ";

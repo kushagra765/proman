@@ -235,17 +235,13 @@ int new(char *name, char *pwd) {
     		system(git_command);
     		printf("+ Connecting to git remote\n");
     	}
-    	printf("Henloooo");
     	free(dir);
-    	printf("HIIIII");
     	free(file_path);
-    	printf("boooo");
     	free(temp);
-    	printf("sadaisojdasdjo");
 	} else {
 		printf("Error: Directory '%s' already exists\n", name);
 		return 0;
 	}
-	return 1;
-
+	
+	return 0;
 }
