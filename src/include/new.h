@@ -1,13 +1,13 @@
 #ifndef __NEW_H__
 #define __NEW_H__
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 
-int new(char *name, char *pwd);
+int new (char *name, char *pwd);
 
-#endif
+#endif //__NEW_H__

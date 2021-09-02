@@ -1,6 +1,6 @@
-/* 
+/*
  * MIT License
- * 
+ *
  * Copyright (c) 2021 Adam Salhi
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -10,9 +10,9 @@
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -25,21 +25,22 @@
 #include <git/push.h>
 
 int push(char *message, char *pwd) {
-    // TODO: check if name is in config file.
-    printf("+ Pushing changes in directory %s\n", pwd);
-    char *add_command = "git add .";
-    char *commit = "git commit -m ";
-    char *commit_command = (char *) malloc((strlen(commit) + strlen(message)) * sizeof(char));
-    strcpy(commit_command, commit);
-    strcat(commit_command, message);
-    char *push_command = "git push -u origin master";
+  // TODO: check if name is in config file.
+  printf("+ Pushing changes in directory %s\n", pwd);
+  char *add_command = "git add .";
+  char *commit = "git commit -m ";
+  char *commit_command =
+      (char *)malloc((strlen(commit) + strlen(message)) * sizeof(char));
+  strcpy(commit_command, commit);
+  strcat(commit_command, message);
+  char *push_command = "git push -u origin master";
 
-    system(add_command);
-    system(commit_command);
-    system(push_command);
+  system(add_command);
+  system(commit_command);
+  system(push_command);
 
-    printf("+ Done!\n");
-    free(commit_command);
+  printf("+ Done!\n");
+  free(commit_command);
 
-    return 0;
+  return 0;
 }
