@@ -54,7 +54,7 @@ int new (char *name, char *pwd) {
   FILE *check_name_in_config;
 
   char *home = getenv("HOME");
-  char *config_file = "/proman/proman.cfg";
+  char *config_file = "proman/proman.cfg";
   char *temp = (char *)malloc(strlen(home) + strlen(config_file) + 1);
   strcpy(temp, home);
   strcat(temp, config_file);
